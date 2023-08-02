@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input onchange="verificarNombre(event)" type="text" placeholder="Nombre">
+        <input onchange = 'verificarApellido(event)' type="text" placeholder="Apellido">
+        <input onchange="verificarContraseña(event)" type="password" placeholder="Contraseña">
+        <input type="email" placeholder="Mail" onchange="capturarMail(event)">
+        <input type='button'onclick="registrarme()" value="Registrarme">
+    </form>
+    <div id="errores"></div>
+    <div id="output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
