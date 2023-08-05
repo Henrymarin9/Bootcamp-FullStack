@@ -7,11 +7,30 @@
 </head>
 <body>
     <form>
-        <input onchange="verificarNombre(event)" type="text" placeholder="Nombre">
-        <input onchange = 'verificarApellido(event)' type="text" placeholder="Apellido">
-        <input onchange="verificarContraseña(event)" type="password" placeholder="Contraseña">
-        <input type="email" placeholder="Mail" onchange="capturarMail(event)">
-        <input type='button'onclick="registrarme()" value="Registrarme">
+        <!-- <input type="text" placeholder="Nombre">
+        <input type="number">
+        <textarea cols=40" rows="5"></textarea>
+        <input  type="radio" name="test" value="valor 1">Valor 1
+        <input type="radio" name="test" value="valor 2">Valor 2
+        <input type="radio" name="test" value="valor 3">Valor 3
+        <input type="checkbox" name="test2"> Leche
+        <input type="checkbox" name="test2"> huevos
+        <input type="checkbox" name="test2"> Manteca
+
+        <select name="marcas de autos" id="">
+            <option value="Ford">Ford</option>
+            <option value="Renault">Renault</option>
+            <option value="Volvo">Volvo</option>
+        </select> -->
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+        <label for="apellido">Apellido</label>
+        <input id='apellido' name="apellido" type="text" placeholder="Apellido" >
+        <label for="pass">Contraseña</label>
+        <input id="pass" name="pass" type="password" placeholder="Contraseña">
+        <label for="mail">Mail</label>
+        <input id="mail" name='mail' type="email" placeholder="Mail" onchange="capturarMail(event)">
+        <button>Registrarme</button>
     </form>
     <div id="errores"></div>
     <div id="output"></div>
