@@ -1,0 +1,43 @@
+ul {
+  display: flex;
+  padding: 0;
+  width: 30%;
+  justify-content: space-evenly;
+  margin-left: auto;
+}
+ul li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #242325;
+  color: #c8c8c8;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #242325;
+  color: #c8c8c8;
+}
+
+a {
+  text-decoration: none;
+  color: #c8c8c8;
+}
+
+#parrafo-footer {
+  width: 30%;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
