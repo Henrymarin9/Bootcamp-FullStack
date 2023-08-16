@@ -18,6 +18,7 @@ header{
     align-items: center;
     background-color: #242325ff;
     color: #c8c8c8ff;
+
 }
 footer{
     display: flex;
@@ -45,7 +46,9 @@ a{
 #menu {
     display: none;
 }
-
+#logo{
+    width: 145px;
+}
 @media (max-width: 800px) {
     #links{
         display: none;

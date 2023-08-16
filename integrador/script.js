@@ -7,3 +7,4 @@ function openMenu(){
         links.style.display = 'flex';
     }
 }
+
