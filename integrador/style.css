@@ -73,6 +73,14 @@ a {
   header {
     flex-wrap: wrap;
   }
+  #parrafo-footer {
+    width: auto;
+  }
+  footer {
+    position: unset;
+    left: auto;
+    bottom: auto;
+  }
 }
 main {
   display: flex;
@@ -131,6 +139,25 @@ section .infoCar h4 {
   grid-column: 2;
 }
 
+@media (max-width: 800px) {
+  #cards-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  #thirdCard {
+    grid-column: auto;
+  }
+  .orangeColor {
+    background-color: white;
+    color: black;
+  }
+  .infoCar h5 {
+    margin: 0 2% 0 auto;
+  }
+  .infoCar h4 {
+    margin: 0;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
@@ -141,6 +168,13 @@ form .formFields {
   height: 15%;
   font-size: 23px;
   margin-bottom: 3%;
+}
+form ul {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #ca0000;
 }
 
 /*# sourceMappingURL=style.css.map */

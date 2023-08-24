@@ -1,5 +1,6 @@
 const nameRegex = /^[A-Z]\D*$/gm;
 const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/gm;
+let validationSummary = document.getElementById("validationSummary");
 function openMenu(){
     let links = document.getElementById('links');
     if(links.style.display == 'flex'){
@@ -13,14 +14,23 @@ function openMenu(){
 
 let form = document.querySelector("form");
 form.addEventListener("submit", (e)=>{
+    validationSummary.innerHTML = "";
     e.preventDefault();
+
     let nombre = e.target[0].value;
-    nombre = sanitize(nombre);
     let lastName = e.target[1].value;
-    lastName = sanitize(lastName);
+    if(nombre.length > 0 && lastName.length > 0){
+        nombre = sanitize(nombre);
+        lastName = sanitize(lastName);
+    }
+    else{
+        validationSummary.innerHTML += "<li>El campo nombre y apellisdo son requeridos.</li>";
+    }
 
     let email = e.target[2].value;
-    validateEmail(email);
+    if(!validateEmail(email)){
+        validationSummary.innerHTML += "<li>El Email tiene que estar en un formato valido EJ: 'ventas@gmail.com'</li>";
+    }
 })
 
 function sanitize(inputValue){
@@ -45,10 +55,10 @@ function sanitize(inputValue){
 
 function validateEmail(email){
     if(email.match(mailRegex)){
-        console.log("Email Valido!")
+        return true;
     }
     else{
-        console.log("Email no valido")
+        return false;
     }
 
 }

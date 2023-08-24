@@ -58,3 +58,25 @@ section{
 #thirdCard{
     grid-column: 2;
 }
+
+@media (max-width: 800px) {
+    #cards-container{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    #thirdCard{
+        grid-column: auto;
+    }
+    .orangeColor{
+        background-color: white;
+        color: black;
+    }
+    .infoCar{
+        h5{
+            margin: 0 2% 0 auto;
+        }
+        h4{
+            margin:0;
+        }
+    }
+}
