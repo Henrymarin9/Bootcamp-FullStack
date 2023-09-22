@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let objeto = {
+        //     propiedad1: "",
+        // }
+        
+        // let prototipo1 = {
+        //     metodo1: function(){console.log("Hola como estas!")}
+        // }
+
+        
+        // let Animal ={
+        //     cantidadPatas:4,
+        //     hacerRuido:function(){console.log("El animal hace ruido")}
+        // }
+        // let perro = Object.create(Animal);
+
+        function Persona(nombre)
+        {
+            
+            this.nombre = nombre;
+            this.edad = 30
+        } 
+        // //agregar esta linea post revisar de que ande bien la creacion.
+        // Persona.prototype.edad = 20
+        // let ana = new Persona("Ana")
+        // let juan = new Persona("Juancito")
+
+
+        // class Rectangulo{
+        //     #esCuadrado;
+        //     constructor(ancho, altura){
+        //         this.ancho = ancho;
+        //         this.altura = altura;
+        //     }
+        //     get Cuadrado(){
+        //         return this.compararLados();
+        //     }
+        //     compararLados(){
+        //         if(this.ancho == this.altura) return true
+        //         else return false;
+        //     }
+        // }
+
+        // const rectangulo = class{
+        //     constructor(ancho, altura){
+        //         this.esCuadrado = false;
+        //         this.ancho = ancho;
+        //     }
+        // }
+
+        // let objeto = new Rectangulo(15, 16)
+
+        class Animal {
+            constructor(nombre){
+                this.nombre = nombre;
+            }
+            hablar(){
+                console.log(this.nombre + " Hace ruido")
+            }
+        }
+
+        let animal = new Animal("Scon")
+
+        class Gato extends Animal{
+            constructor(nombre){
+                super(nombre)
+                this.tieneCola = true;
+            }
+            hablar(){
+                console.log(this.nombre + " mauya")
+                super.hablar();
+            }
+        }
+        let gato = new Gato("Scon")
+
+    </script>
+</body>
+</html>
