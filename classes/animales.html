@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(nombre,especie,numPatas,cola){
+                this.nombre = nombre;
+                this.especie = especie;
+                this.numPatas = numPatas;
+                this.cola = cola;
+            }
+        }
+
+        class Vaca extends Animal{
+            constructor(nombre,especie,numPatas,cola, litros){
+                super(nombre, especie,numPatas, cola)
+                this.litros = litros;
+            }
+
+            ordeniar(cantLitros){
+                if((this.litros - cantLitros) >= 0 ){
+                    this.litros -= cantLitros;
+                }
+                else
+                    console.log(" No podemos ordeñar :(")
+            }
+        }
+
+        class Tigre extends Animal{
+            constructor(nombre,especie,numPatas,cola, cantPresas,tieneHambre){
+                super(nombre, especie,numPatas, cola)
+                this.cantPresas = cantPresas;
+                this.tieneHambre = tieneHambre;
+            }
+
+            cazar(){
+                this.cantPresas += this.tieneHambre ? 1 : 0
+                return this.cantPresas;
+            }
+        }
+        class Leon extends Tigre{
+            constructor(nombre,especie,numPatas,cola, cantPresas,tieneHambre, tieneCrias){
+                super(nombre, especie,numPatas, cola, cantPresas, tieneHambre)
+                this.tieneCrias = tieneCrias;
+            }
+            cazar(){
+                if(this.tieneCrias){
+                    return super.cazar();
+                }
+            }
+        }
+        let vaquita = new Vaca("Betsy", "Mamiferos", 4,true,10)
+        let tiger = new Tigre("Tiger", "Felino", 4, true, 1,true);
+
+        let leon = new Leon("Simba", "Felino", 4, true, 1,true,true)
+    </script>
+</body>
+</html>

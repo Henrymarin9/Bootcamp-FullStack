@@ -73,6 +73,18 @@
             constructor(nombre){
                 super(nombre)
                 this.tieneCola = true;
+                // this.vidas = 1;
+            }
+            
+            get vidas(){
+                return this.vidas;
+            }
+            set vidas(value){
+                if(value > 9){
+                    this.vidas = 9;
+                }
+                else
+                    this.vidas = value;
             }
             hablar(){
                 console.log(this.nombre + " mauya")
