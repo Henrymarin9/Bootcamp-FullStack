@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="img/auto-trade-logo-retina.png" alt="imagen"></a>
+
+
+        <a href="javascript:void(0);" onclick = 'openMenu()' id="menu"><i class="fa fa-bars"></i></a>
+        <ul id="links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="alta.html">Alta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </header>
+    <main>
+        <form>
+            <ul id="validationSummary">
+            </ul>
+            <label for="name">Nombre</label>
+            <input class="formFields" type="text" name="name" placeholder="Nombre">
+            <label for="lastName">Apellido</label>
+            <input class="formFields" type="text" name="lastName" placeholder="Apellido">
+            <label for="email">Mail</label>
+            <input class="formFields" type="text" name="email" placeholder="auto@ventas.com" >
+            <select name="topic">
+                <option value="sell">Venta de auto</option>
+                <option value="buy">Compra de un auto</option>
+                <option value="general">Otra...</option>
+            </select>
+            <textarea class="formFields" name="message" cols="30" rows="10" placeholder="Ingrese su Mensaje"></textarea>
+
+            <button class="formFields">Enviar Consulta</button>
+        </form>
+    </main>
+    <footer>
+        <p id="parrafo-footer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis id modi, perspiciatis, maxime, beatae voluptatibus consectetur eos ducimus nobis provident voluptas in illo. Quae est, quasi officia eius sint minima?</p>
+        <a href="contacto.html">Contactanos!</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

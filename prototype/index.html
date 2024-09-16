@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombres = ['Fran', 'Valentina', 'Guille', 'Lautaro']
+        // function buscar(){
+        //     for (let i = 0; i < items.length; i++) {
+        //         const nombre = items[i];
+        //         if(nombre == 'Francisco') {
+        //             return nombre;
+        //         }
+        //     }
+
+        //     return "No se encontro a la persona";
+        // }
+
+        function buscar(valor, posicion, items){
+            // if(posicion == items.length) return;
+            if(valor == 'Santi') return valor;
+            // if(posicion == 1000) return posicion;
+            posicion++;
+            return buscar(items[posicion], posicion, items)
+        }
+       console.log(buscar(nombres[0], 0, nombres));
+
+
+        // let objetoLiteral = {}
+        // let prototipo = {
+        //     saludo: function(){console.log("Hola!")}
+        // }
+
+        // let hijo = Object.create(prototipo);
+
+        // function CrearPersona(name, age){
+        //     let persona = {
+        //         nombre:name,
+        //         edad:age
+        //     }
+        //     return persona
+        // }
+
+        // let juan = new CrearPersona(obtenerNombre(), 22)
+        // let mariana = new CrearPersona("Mariana", 23)
+
+        // function obtenerNombre(){
+
+        //     return prompt("Ingrese su nombre")
+        // }
+        
+    </script>
+</body>
+</html>

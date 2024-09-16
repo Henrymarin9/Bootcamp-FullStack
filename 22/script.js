@@ -1,16 +1,20 @@
 let form = document.querySelector("form");
-let nombre = document.getElementById("nombre");
+let nombre = document.querySelector("#nombre");
+let error = document.querySelector("#errores");
+nombre.willValidate = true;
+let errores;
 form.addEventListener("submit",(e)=>{
+    errores = ''
+
     e.preventDefault();
     let valor = nombre.value;
     let longitud = valor.length;
     if(longitud < 3){
-        //...
-        console.log("Validacion")
-        nombre.setCustomValidity("El largo minimo es de 3 caracteres")
+        errores += "<li>El largo minimo es de 3 caracteres</li>"
     }
     else{
-        nombre.setCustomValidity('')
+        nombre.setCustomValidity("")
     }
-    nombre.reportValidity()
+    error.innerHTML = errores
+
 })

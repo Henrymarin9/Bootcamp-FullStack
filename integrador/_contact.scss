@@ -1,0 +1,18 @@
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    width: 90%;
+    .formFields{
+        height: 15%;
+        font-size: 23px;
+        margin-bottom: 3%;
+    }
+    ul{
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        color: #ca0000;
+    }
+}

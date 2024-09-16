@@ -1,0 +1,180 @@
+body {
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  width: 40%;
+  justify-content: space-evenly;
+  margin-left: auto;
+}
+ul li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #242325;
+  color: #c8c8c8;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #242325;
+  color: #c8c8c8;
+}
+
+a {
+  text-decoration: none;
+  color: #c8c8c8;
+}
+
+#parrafo-footer {
+  width: 30%;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+#menu {
+  display: none;
+}
+
+#logo {
+  width: 145px;
+}
+
+@media (max-width: 800px) {
+  #links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+  #links li {
+    margin: 10px;
+  }
+  #menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  #menu i {
+    font-size: 30px;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  #parrafo-footer {
+    width: auto;
+  }
+  footer {
+    position: unset;
+    left: auto;
+    bottom: auto;
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#cards-container {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 50% 50%;
+  width: 70%;
+  justify-items: center;
+}
+
+#mainImage img {
+  width: 100%;
+}
+
+.infoCar {
+  display: flex;
+}
+.infoCar h5 {
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+section .infoCar h5 {
+  margin: 0 2% 0 auto;
+}
+section .infoCar h4 {
+  margin: 0;
+}
+
+.extraInfo {
+  justify-content: flex-end;
+}
+.extraInfo p {
+  margin: 2%;
+}
+
+.orangeColor {
+  background-color: #f53936;
+  color: whitesmoke;
+}
+
+#cardImage img {
+  width: 20%;
+}
+
+.tinyCard {
+  width: 95%;
+  height: 95%;
+}
+
+#thirdCard {
+  grid-column: 2;
+}
+
+@media (max-width: 800px) {
+  #cards-container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  #thirdCard {
+    grid-column: auto;
+  }
+  .orangeColor {
+    background-color: white;
+    color: black;
+  }
+  .infoCar h5 {
+    margin: 0 2% 0 auto;
+  }
+  .infoCar h4 {
+    margin: 0;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  width: 90%;
+}
+form .formFields {
+  height: 15%;
+  font-size: 23px;
+  margin-bottom: 3%;
+}
+form ul {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #ca0000;
+}
+
+/*# sourceMappingURL=style.css.map */
